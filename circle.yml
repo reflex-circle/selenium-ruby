@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   cache_directories:
-   - "vendor/bundle" #キャッシュ
+   #- "vendor/bundle" #キャッシュ
   override:
    - gem install bundler --pre
    - bundle install -j4 --path vendor/bundle #並列化
