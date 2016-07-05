@@ -2,12 +2,10 @@ require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'pry'
 
-# RSpecにCapybaraのDSLを設定
 RSpec.configure do |config|
   config.include Capybara::DSL
 end
 
-# Capybaraにseleniumを使うように設定
 Capybara.default_driver = :selenium
 Capybara.app_host = 'https://github.com/'
 
@@ -21,12 +19,12 @@ describe "GitHub" do
   it "トップページが表示されること" do
     expect(page).to have_content('How people build software')
   end
-=begin
+
   it "ログイン画面が表示できること" do
     click_link "Sign in"
     expect(current_path).to eq '/login'
   end
-
+=begin
   it "ログインできること" do
     click_link "Sign in"
 
