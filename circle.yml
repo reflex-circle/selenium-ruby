@@ -1,3 +1,9 @@
+machine:
+  timezone:
+    America/Los_Angeles
+  ruby:
+    version: 2.3.0 #デフォルトでは1.9.3でgemがインストールできない
+
 dependencies:
   override:
    - bundle install
