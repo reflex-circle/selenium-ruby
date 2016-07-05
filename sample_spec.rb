@@ -19,7 +19,7 @@ describe "GitHub" do
   end
 
   it "トップページが表示されること" do
-    expect(page).to have_content('Build software better, together')
+    expect(page).to have_content('How people build software')
   end
 =begin
   it "ログイン画面が表示できること" do
