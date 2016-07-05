@@ -1,12 +1,13 @@
 machine:
-  timezone:
-    America/Los_Angeles
   ruby:
     version: 2.3.0 #デフォルトでは1.9.3でgemがインストールできない
 
 dependencies:
+  cache_directories:
+   - "vendor/bundle" #キャッシュ
   override:
-   - bundle install
+   - gem install bundler --pre
+   - bundle j4 --path vendor/bundler #並列化
    - wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.0.jar
    - java -jar selenium-server-standalone-2.53.0.jar:
        background: true
