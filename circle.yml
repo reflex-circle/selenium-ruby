@@ -13,4 +13,4 @@ dependencies:
 
 test:
   override:
-   - rpsec sample_spec.rb
+   - rspec sample_spec.rb
