@@ -21,7 +21,7 @@ describe "ログイン" do
     expect(page).to have_content('Welcome to Twitter.')
   end
   it "ログイン画面が表示できること" do
-    click_link "Log In"
+    click_link "Log in"
     expect(current_path).to eq '/login/error?redirect_after_login=%2F%3Flang%3Den'
     puts CGI.pretty(page.body)
   end
