@@ -7,22 +7,22 @@ RSpec.configure do |config|
 end
 
 Capybara.default_driver = :selenium
-Capybara.app_host = 'https://github.com/'
+Capybara.app_host = 'https://twitter.com/'
 
 
-describe "GitHub" do
+describe "ログイン" do
 
   before do
     visit '/'
   end
 
   it "トップページが表示されること" do
-    expect(page).to have_content('How people build software')
+    expect(page).to have_content('「いま」起きていることを見つけよう。')
   end
 
   it "ログイン画面が表示できること" do
-    click_link "Sign in"
-    expect(current_path).to eq '/login'
+    click_link "ログイン"
+    expect(current_path).to eq '/login/error?redirect_after_login=%2F'
   end
 =begin
   it "ログインできること" do
