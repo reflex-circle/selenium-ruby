@@ -12,4 +12,4 @@ twitter - https://twitter.com/
 ###Capybara
 現在の表示しているHTMLを成形して出力
 
-`puts CGI.pretty(page.body)
+`puts CGI.pretty(page.body)`
