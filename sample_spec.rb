@@ -17,8 +17,8 @@ describe "ログイン" do
   end
 
   it "トップページが表示されること" do
+    puts page.body
     expect(page).to have_content('「いま」起きていることを見つけよう。')
-    puts CGI.pretty(page.body)
   end
   it "ログイン画面が表示できること" do
     click_link "ログイン"
