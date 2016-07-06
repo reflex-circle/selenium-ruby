@@ -23,16 +23,13 @@ describe "ログイン" do
     click_on "ログイン"
     expect(current_path).to eq '/login/error'
   end
-=begin
-  it "ログインできること" do
-    click_link "Sign in"
 
-    # テキストフィールドに入力し、ボタンをクリック(id, name, value属性などを指定できる)
-    fill_in 'login_field', with: 'GitHubのユーザ名'
-    fill_in 'password',    with: 'GitHubのパスワード'
-    click_button "Sign in"
+  it "ログインできること" do
+    fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
+    fill_in 'session[password]',          with: ENV['TWITTER_PW']
+    click_on "ログイン"
 
     expect(current_path).to eq '/'
   end
-=end
+
 end
