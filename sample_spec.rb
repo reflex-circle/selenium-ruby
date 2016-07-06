@@ -7,7 +7,7 @@ RSpec.configure do |config|
 end
 
 Capybara.default_driver = :selenium
-Capybara.app_host = 'https://twitter.com/?lang=ja'
+Capybara.app_host = 'https://twitter.com?lang=en'
 
 
 describe "ログイン" do
@@ -18,11 +18,11 @@ describe "ログイン" do
 
   it "トップページが表示されること" do
     puts page.body
-    expect(page).to have_content('「いま」起きていることを見つけよう。')
+    expect(page).to have_content('Welcome to Twitter.')
   end
   it "ログイン画面が表示できること" do
-    click_link "ログイン"
-    expect(current_path).to eq '/login/error?redirect_after_login=%2F'
+    click_link "Log In"
+    expect(current_path).to eq '/login/error?redirect_after_login=%2F%3Flang%3Den'
     puts CGI.pretty(page.body)
   end
 =begin
