@@ -34,6 +34,7 @@ describe "ログイン" do
 
   it "ツイートできること" do
     puts CGI.pretty(page.body)
+    click_on "global-new-tweet-button"
     fill_in 'global-new-tweet-button', with: Time.now
     click_on "ツイート"
 
