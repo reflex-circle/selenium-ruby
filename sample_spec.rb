@@ -18,13 +18,13 @@ describe "ログイン" do
 
   it "トップページが表示されること" do
     expect(page).to have_content('「いま」起きていることを見つけよう。')
+    puts CGI.pretty(page.body)
   end
- puts page.body
   it "ログイン画面が表示できること" do
     click_link "ログイン"
     expect(current_path).to eq '/login/error?redirect_after_login=%2F'
+    puts CGI.pretty(page.body)
   end
-  puts page.body
 =begin
   it "ログインできること" do
     click_link "Sign in"
