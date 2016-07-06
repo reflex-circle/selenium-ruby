@@ -15,6 +15,7 @@ describe "ログイン" do
   end
 
   it "トップページが表示されること" do
+    #puts CGI.pretty(page.body)
     expect(page).to have_title 'Twitterへようこそ - ログインまたは新規登録'
   end
 
@@ -25,13 +26,15 @@ describe "ログイン" do
   end
 
   it "ログインできること" do
+    #puts CGI.pretty(page.body)
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     click_on "ログイン"
-    puts CGI.pretty(page.body)
     expect(current_path).to eq '/'
     
+    puts CGI.pretty(page.body)
     find('#global-new-tweet-button').click
+    find('#tweet-box-global').set(Time.now)
   end
 =begin
   it "ツイートできること" do
