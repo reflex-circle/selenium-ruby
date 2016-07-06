@@ -32,4 +32,11 @@ describe "ログイン" do
     expect(current_path).to eq '/'
   end
 
+  it "ツイートできること" do
+    fill_in 'tweet', with: Time.now
+    click_on "ツイート"
+
+    expect(current_path).to eq '/'
+  end
+
 end
