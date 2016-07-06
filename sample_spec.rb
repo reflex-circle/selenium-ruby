@@ -31,13 +31,13 @@ describe "ログイン" do
     puts CGI.pretty(page.body)
     expect(current_path).to eq '/'
     
-    find('global-new-tweet-button').click
+    find('#global-new-tweet-button').click
   end
-
+=begin
   it "ツイートできること" do
-    #puts CGI.pretty(page.body)
+    puts CGI.pretty(page.body)
     find('global-new-tweet-button').click
     expect(current_path).to eq '/'
   end
-
+=end
 end
