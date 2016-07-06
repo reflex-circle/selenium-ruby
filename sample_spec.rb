@@ -28,12 +28,12 @@ describe "ログイン" do
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     click_on "ログイン"
-
+    puts CGI.pretty(page.body)
     expect(current_path).to eq '/'
   end
 
   it "ツイートできること" do
-    puts CGI.pretty(page.body)
+    #puts CGI.pretty(page.body)
     find('global-new-tweet-button').click
     expect(current_path).to eq '/'
   end
