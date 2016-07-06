@@ -12,9 +12,9 @@ Capybara.app_host = 'https://twitter.com?lang=en'
 
 describe "ログイン" do
 
-  before do
-    visit '/'
-  end
+  #before do
+  #  visit '/'
+  #end
 
   it "トップページが表示されること" do
     puts page.body
