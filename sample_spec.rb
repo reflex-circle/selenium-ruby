@@ -7,13 +7,11 @@ RSpec.configure do |config|
 end
 
 Capybara.default_driver = :selenium
-Capybara.app_host = 'https://twitter.com?lang=en'
-
 
 describe "ログイン" do
 
   before do
-    visit 'https://twitter.com?lang=en'
+    visit 'https://twitter.com/?lang=ja'
   end
 
   it "トップページが表示されること" do
