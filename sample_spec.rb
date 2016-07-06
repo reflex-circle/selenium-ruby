@@ -19,12 +19,14 @@ describe "ログイン" do
   end
 
   it "ログイン画面が表示できること" do
-    puts CGI.pretty(page.body)
+    #puts CGI.pretty(page.body)
     click_on "ログイン"
     expect(current_path).to eq '/login/error'
   end
 
   it "ログインできること" do
+    puts ENV['TWITTER_ID']
+    puts ENV['TWITTER_PW']
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     click_on "ログイン"
