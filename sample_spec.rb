@@ -33,7 +33,7 @@ describe "ログイン" do
   end
 
   it "ツイートできること" do
-    click_on 'global-new-tweet-button'
+    page.first('#global-new-tweet-button').click
     expect(current_path).to eq '/'
   end
 
