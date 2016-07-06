@@ -25,10 +25,6 @@ describe "ログイン" do
   end
 
   it "ログインできること" do
-    puts '----'
-    puts ENV['TWITTER_ID']
-    puts ENV['TWITTER_PW']
-    puts '----'
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     click_on "ログイン"
