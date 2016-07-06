@@ -34,7 +34,7 @@ describe "ログイン" do
     
     #puts CGI.pretty(page.body)
     find('#global-new-tweet-button').click
-    find('#tweet-box-global').set(Time.now)
+    find('#tweet-box-global').set('Time.now')
     puts CGI.pretty(page.body)
     click_on "ツイート"
   end
