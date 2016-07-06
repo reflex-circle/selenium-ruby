@@ -33,10 +33,11 @@ describe "ログイン" do
     expect(current_path).to eq '/'
     
     #puts CGI.pretty(page.body)
-    find('#global-new-tweet-button').click
-    find('#tweet-box-global').set('Time.now')
+    #find('#global-new-tweet-button').click
+    #find('#tweet-box-global').set('Time.now')
+    find('#tweet-box-home-timeline').set('Time.now')
     puts CGI.pretty(page.body)
-    click_on "ツイート"
+    find('.Icon Icon--tweet').click
   end
 =begin
   it "ツイートできること" do
