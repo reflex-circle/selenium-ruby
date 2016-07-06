@@ -16,10 +16,10 @@ describe "ログイン" do
 
   it "トップページが表示されること" do
     puts page.body
-    expect(page).to have_content('Welcome to Twitter.')
+    expect(page).to have_title 'Twitterへようこそ - ログインまたは新規登録'
   end
   it "ログイン画面が表示できること" do
-    click_link "Log in"
+    click_link "ログイン"
     expect(current_path).to eq '/login/error?redirect_after_login=%2F%3Flang%3Den'
     puts CGI.pretty(page.body)
   end
