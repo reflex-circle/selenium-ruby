@@ -33,6 +33,7 @@ describe "ログイン" do
   end
 
   it "ツイートできること" do
+    puts CGI.pretty(page.body)
     fill_in 'tweet', with: Time.now
     click_on "ツイート"
 
