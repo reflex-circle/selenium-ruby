@@ -33,9 +33,7 @@ describe "ログイン" do
   end
 
   it "ツイートできること" do
-    puts CGI.pretty(page.body)
-    click_on "global-new-tweet-button"
-
+    click_on 'global-new-tweet-button'
     expect(current_path).to eq '/'
   end
 
