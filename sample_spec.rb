@@ -58,6 +58,7 @@ describe "ログイン" do
     #find('#tweet-box-global').set('Time.now')
     #find('.js-tweet-btn').click
     #puts CGI.pretty(page.body)
+    find('#tweet-box-home-timeline').click
     find('#tweet-box-home-timeline').set('Time.now')
     find('.js-tweet-btn').click
   end
