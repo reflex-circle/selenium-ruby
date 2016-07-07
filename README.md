@@ -85,9 +85,12 @@ dependencies:
 ```
 https://circleci.com/docs/browser-debugging/
 ```
-* reositoryごとに環境変数を設定したい  
+* reositoryごとに環境変数を設定したい
+
+```
 BUILDS -> 歯車アイコン -> BUILD SETTINGS -> Environment Variables  
-アクセストークンやパスワードなどを隠したい場合に
+アクセストークンやパスワードなどを隠したい場合に  
+```
 _________________________________________________________________________________________________________
 ###■Rspec
 
