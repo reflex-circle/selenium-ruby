@@ -20,7 +20,11 @@ describe "gitHubにログインしてBioを更新する" do
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
     
-    find('.vcard-avatar').click
+    #find('.vcard-avatar').click
+    visit 'https://github.com/settings/profile'
+    fill_in 'user_profile_bio' with: 'aiueo'
+    
+    click_on 'Update profile'
   end
 
 end
