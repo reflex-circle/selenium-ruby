@@ -20,7 +20,7 @@ describe "gitHubにログインしてBioを更新する" do
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
     
-    find(.vcard-avatar).click
+    find('.vcard-avatar').click
   end
 
 end
