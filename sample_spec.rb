@@ -46,8 +46,8 @@ describe "ログイン", js: true do
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     puts CGI.pretty(page.body)
-    find('.primary-btn').click
-    #click_button 'ログイン'
+    #find('.primary-btn').click
+    click_on 'Log in'
     puts ENV['TWITTER_PW']
     puts current_path
     #expect(current_path).to eq '/'
