@@ -1,10 +1,22 @@
 # SeleniumとCapybaraでE2Eテストをする
 
 ## テスト対象
-twitter - https://twitter.com/
+github - https://github.com
 
 ## テストケース
+
+#### 1. ログイン画面 -> ホーム画面
 　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_login.png)
+
+#### 2. ホーム画面 -> プロフィール画面
+　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_home.png)
+　
+#### 3. プロフィール画面 -> 編集画面
+　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_profile.png)
+
+#### 4. 編集画面 -> プロフィール画面
+　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_edit.png)
+　
 
 ## 覚書
 _________________________________________________________________________________________________________
