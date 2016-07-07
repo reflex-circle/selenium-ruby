@@ -1,5 +1,6 @@
 require 'capybara/rspec'
 require 'selenium-webdriver'
+require 'capybara-webkit'
 require 'pry'
 require 'headless'
 
