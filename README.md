@@ -4,7 +4,7 @@
 twitter - https://twitter.com/
 
 ## テストケース
-　![case1](https://github.com/reflex-circle/selenium-ruby/github_login.png)
+　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_login.png)
 
 ## 覚書
 _________________________________________________________________________________________________________
