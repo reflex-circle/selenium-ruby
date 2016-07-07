@@ -31,7 +31,7 @@ describe "gitHubにログインしてBioを更新する" do
     # case3 - input 
     visit 'https://github.com/settings/profile'
     # case3 - output
-    expect(page).to have_http_status(200)
+    expect(page).to have_title 'Your profile'
     
     # case4 - input
     @outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
