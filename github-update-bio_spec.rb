@@ -19,7 +19,7 @@ describe "gitHubにログインしてBioを更新する" do
     fill_in 'login',    with: ENV['GITHUB_ID']
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
-    #case1 - output
+    # case1 - output
     expect(page).to have_content 'Discover interesting projects and people to populate your personal news feed.'
    
     # case2 - input
@@ -37,8 +37,8 @@ describe "gitHubにログインしてBioを更新する" do
     @outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
     fill_in 'user_profile_bio', with: outtime + ' by CircleCI'
     click_on 'Update profile'
-    visit https://github.com/reflex-circle
+    visit 'https://github.com/' + ENV['GITHUB_ID']
     # case4 - output
-    expect(page).to have_content @outtime
+    expect(page).to have_content outtime
   end
 end
