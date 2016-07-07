@@ -11,7 +11,7 @@ Capybara.default_driver = :selenium
 describe 'github test' do
 
   before do
-    outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    @outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   end
 
   it 'gitHubにログインしてBioを更新する' do
@@ -35,13 +35,13 @@ describe 'github test' do
     expect(page).to have_title 'Your Profile'
 
     # case4 - input
-    fill_in 'user_profile_bio', with: outtime + ' by CircleCI'
+    fill_in 'user_profile_bio', with: @outtime + ' by CircleCI'
     click_on 'Update profile'
     visit 'https://github.com/' + ENV['GITHUB_ID']
     # case4 - output
     expect(page).to have_title ENV['GITHUB_ID']
 
     # case5 - output
-    expect(page).to have_content outtime
+    expect(page).to have_content @outtime
   end
 end
