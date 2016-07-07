@@ -36,8 +36,8 @@ describe "ログイン" do
     #find('#global-new-tweet-button').click
     #find('#tweet-box-global').set('Time.now')
     find('#tweet-box-home-timeline').set('Time.now')
-    puts CGI.pretty(page.body)
-    find('.Icon Icon--tweet', disabled: true).click
+    #puts CGI.pretty(page.body)
+    find('.button.tweet-action').click
   end
 =begin
   it "ツイートできること" do
