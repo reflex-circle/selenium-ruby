@@ -22,7 +22,7 @@ describe "gitHubにログインしてBioを更新する" do
     
     #find('.vcard-avatar').click
     visit 'https://github.com/settings/profile'
-    fill_in 'user_profile_bio' with: 'aiueo'
+    fill_in 'user_profile_bio', with: 'aiueo'
     
     click_on 'Update profile'
   end
