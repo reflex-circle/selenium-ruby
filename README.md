@@ -76,6 +76,13 @@ dependencies:
    - java -jar selenium-server-standalone-2.53.0.jar:
        background: true #バックグラウンドで実行しないと後続処理が動かない
 ```
+
+* CircleCI上のServerをSSLで繋げる
+
+```
+https://circleci.com/docs/browser-debugging/
+```
+
 _________________________________________________________________________________________________________
 ###■Rspec
 
