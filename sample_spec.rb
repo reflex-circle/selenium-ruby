@@ -15,9 +15,10 @@ Capybara.default_driver = :selenium
 Capybara.javascript_driver = :webkit
 
 Capybara::Webkit.configure do |config|
-  #config.block_unknown_urls
-  config.allow_url('https://abs.twimg.com')
-  config.allow_url('https://twitter.com')
+  config.block_unknown_urls
+  #config.allow_url('https://abs.twimg.com')
+  #config.allow_url('https://twitter.com')
+  config.allow_url('*')
 end
 
 describe "ログイン", js: true do
