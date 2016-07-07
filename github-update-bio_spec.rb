@@ -19,14 +19,8 @@ describe "gitHubにログインしてBioを更新する" do
     fill_in 'login',    with: ENV['GITHUB_ID']
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
-
-    first('#global-new-tweet-button').click
-    first('#tweet-box-global').set('Time.now')
-    first('.js-tweet-btn').click
-    #puts CGI.pretty(page.body)
-    #find('#tweet-box-home-timeline').click
-    #find('#tweet-box-home-timeline').set('Time.now')
-    #find('.js-tweet-btn').click
+    
+    click_link 'Edit profile'
   end
 
 end
