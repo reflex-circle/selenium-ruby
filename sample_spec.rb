@@ -53,14 +53,13 @@ describe "ログイン" do
     #expect(current_path).to eq '/'
     
     #puts CGI.pretty(page.body)
-    #find('#tweet-box-global').set('Time.now')
-    #find('#global-new-tweet-button').click
-    #find('#tweet-box-global').set('Time.now')
-    #find('.js-tweet-btn').click
-    #puts CGI.pretty(page.body)
-    find('#tweet-box-home-timeline').click
-    find('#tweet-box-home-timeline').set('Time.now')
+    find('#global-new-tweet-button').click
+    find('#tweet-box-global').set('Time.now')
     find('.js-tweet-btn').click
+    #puts CGI.pretty(page.body)
+    #find('#tweet-box-home-timeline').click
+    #find('#tweet-box-home-timeline').set('Time.now')
+    #find('.js-tweet-btn').click
   end
 
 end
