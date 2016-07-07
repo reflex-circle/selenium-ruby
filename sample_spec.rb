@@ -14,12 +14,19 @@ headless.start
 Capybara.default_driver = :selenium
 Capybara.javascript_driver = :webkit
 
+Capybara::Webkit.configure do |config|
+  config.block_unknown_urls
+  config.allow_url('https://abs.twimg.com')
+  config.allow_url('https://twitter.com')
+end
+
 describe "ログイン", js: true do
 
   before do
     visit 'https://twitter.com/?lang=ja'
   end
 
+=begin
   it "トップページが表示されること" do
     #puts CGI.pretty(page.body)
     expect(page).to have_title 'Twitterへようこそ - ログインまたは新規登録'
@@ -30,6 +37,7 @@ describe "ログイン", js: true do
     click_on "ログイン"
     expect(current_path).to eq '/login/error'
   end
+=end
 
   it "ログインできること" do
     #puts CGI.pretty(page.body)
@@ -47,11 +55,5 @@ describe "ログイン", js: true do
     #find('#tweet-box-home-timeline').set('Time.now')
     #find('.js-tweet-btn').click
   end
-=begin
-  it "ツイートできること" do
-    puts CGI.pretty(page.body)
-    find('global-new-tweet-button').click
-    expect(current_path).to eq '/'
-  end
-=end
+
 end
