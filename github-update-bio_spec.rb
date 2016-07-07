@@ -34,7 +34,7 @@ describe "gitHubにログインしてBioを更新する" do
     expect(page).to have_title 'Your Profile'
     
     # case4 - input
-    @outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+    outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
     fill_in 'user_profile_bio', with: outtime + ' by CircleCI'
     click_on 'Update profile'
     visit 'https://github.com/' + ENV['GITHUB_ID']
