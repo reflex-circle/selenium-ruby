@@ -18,7 +18,7 @@ describe "gitHubにログインしてBioを更新する" do
     fill_in 'login',    with: ENV['GITHUB_ID']
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
-    click_lick '@reflex-circle'
+    click_link '@reflex-circle'
     #visit 'https://github.com/settings/profile'
     fill_in 'user_profile_bio', with: Time.now.strftime("%Y-%m-%d %H:%M:%S") + ' by CircleCI'
     
