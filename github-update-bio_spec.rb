@@ -20,6 +20,7 @@ describe "gitHubにログインしてBioを更新する" do
     click_on 'Sign in'
     click_link '@reflex-circle'
     click_link 'Your profile'
+    puts CGI.pretty(page.body)
     #visit 'https://github.com/settings/profile'
     fill_in 'user_profile_bio', with: Time.now.strftime("%Y-%m-%d %H:%M:%S") + ' by CircleCI'
     
