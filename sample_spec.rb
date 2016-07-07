@@ -1,4 +1,3 @@
-require "capybara/rails"
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'pry'
