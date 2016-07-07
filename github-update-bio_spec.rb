@@ -24,7 +24,7 @@ describe 'gitHubにログインしてBioを更新する' do
     expect(page).to have_content 'Discover interesting projects and people to populate your personal news feed.'
   end
   
-  it '2. ホーム画面 -> プロフィール画面'
+  it '2. ホーム画面 -> プロフィール画面' do
     # case2 - input
     click_link '@reflex-circle'
     click_link 'Your profile'
@@ -32,14 +32,14 @@ describe 'gitHubにログインしてBioを更新する' do
     expect(page).to have_title ENV['GITHUB_ID']
   end
   
-  it '3. プロフィール画面 -> 編集画面'
+  it '3. プロフィール画面 -> 編集画面' do
     # case3 - input 
     visit 'https://github.com/settings/profile'
     # case3 - output
     expect(page).to have_title 'Your Profile'
   end
   
-  it '4. 編集画面 -> プロフィール画面'
+  it '4. 編集画面 -> プロフィール画面' do
     # case4 - input
     fill_in 'user_profile_bio', with: outtime + ' by CircleCI'
     click_on 'Update profile'
@@ -48,7 +48,7 @@ describe 'gitHubにログインしてBioを更新する' do
     expect(page).to have_title ENV['GITHUB_ID']
   end
   
-  it '5. Bioの値がビルドを実行した時間に更新されているか確認'
+  it '5. Bioの値がビルドを実行した時間に更新されているか確認' do
     # case5 - output
     expect(page).to have_content outtime
   end
