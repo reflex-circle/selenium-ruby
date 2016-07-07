@@ -23,9 +23,17 @@ puts CGI.pretty(page.body)
 find("#id or .class").click #cssのidかclassを探してクリック 「#」「.」を指定しないと見つからないので注意
 ```
 
-* 入力対象がInput、textareaでなくて、fill_inが使用できない場合
+* 入力対象がInput、textareaではなくて、fill_inが使用できない場合
 
+```
+find('#id').set('Text') 
+```
 
+* CapybaraにJavaSripctの動作を待たせる
+
+```
+describe "ログイン", js: true do
+```
 _________________________________________________________________________________________________________
 ###■CircleCI
 
