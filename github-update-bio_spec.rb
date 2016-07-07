@@ -11,12 +11,12 @@ Capybara.default_driver = :selenium
 describe 'gitHubにログインしてBioを更新する' do
 
   before do
-    visit 'https://github.com/login'
     outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   end
 
   it '1. ログイン画面 -> ホーム画面' do
     # case1 - input
+    visit 'https://github.com/login'
     fill_in 'login',    with: ENV['GITHUB_ID']
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
