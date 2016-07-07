@@ -37,6 +37,9 @@ LoginID - reflex-circle
 
 <img src="https://circleci.com/gh/reflex-circle/selenium-ruby.svg?style=shield&circle-token=fbadcabe515d1f7d0d54175159cfe12ebb5a01ab">
 
+# 性能テスト、負荷テスト
+http://jmeter.apache.org/
+
 #覚書
 _________________________________________________________________________________________________________
 ###■Capybara
@@ -82,7 +85,9 @@ dependencies:
 ```
 https://circleci.com/docs/browser-debugging/
 ```
-
+* reositoryごとに環境変数を設定したい
+BUILDS -> 歯車アイコン -> BUILD SETTINGS -> Environment Variables  
+アクセストークンやパスワードなどを隠したい場合に
 _________________________________________________________________________________________________________
 ###■Rspec
 
