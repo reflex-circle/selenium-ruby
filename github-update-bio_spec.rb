@@ -15,13 +15,11 @@ describe "gitHubにログインしてBioを更新する" do
   end
 
   it "ログインできること" do
-    #puts CGI.pretty(page.body)
     fill_in 'login',    with: ENV['GITHUB_ID']
     fill_in 'password', with: ENV['GITHUB_PW']
     click_on 'Sign in'
-    
-    #find('.vcard-avatar').click
-    visit 'https://github.com/settings/profile'
+    click_lick '@reflex-circle'
+    #visit 'https://github.com/settings/profile'
     fill_in 'user_profile_bio', with: Time.now.strftime("%Y-%m-%d %H:%M:%S") + ' by CircleCI'
     
     click_on 'Update profile'
