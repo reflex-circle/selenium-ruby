@@ -43,7 +43,7 @@ describe "ログイン", js: true do
     #puts CGI.pretty(page.body)
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
-    click_on "ログイン"
+    click_button 'ログイン'
     expect(current_path).to eq '/'
     
     puts CGI.pretty(page.body)
