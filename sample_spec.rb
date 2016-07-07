@@ -8,7 +8,7 @@ end
 
 Capybara.default_driver = :selenium
 
-describe "ログイン" do
+describe "ログイン", js: true do
 
   before do
     visit 'https://twitter.com/?lang=ja'
