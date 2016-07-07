@@ -4,8 +4,7 @@
 twitter - https://twitter.com/
 
 ## テストケース
-* ログイン
-* ツイート
+　![case1](https://github.com/reflex-circle/selenium-ruby/github_login.png)
 
 ## 覚書
 _________________________________________________________________________________________________________
