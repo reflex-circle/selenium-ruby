@@ -44,9 +44,11 @@ describe "ログイン", js: true do
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     click_button 'ログイン'
+    puts ENV['TWITTER_ID']
+    puts current_path
     expect(current_path).to eq '/'
     
-    puts CGI.pretty(page.body)
+    #puts CGI.pretty(page.body)
     #find('#tweet-box-global').set('Time.now')
     #find('#global-new-tweet-button').click
     #find('#tweet-box-global').set('Time.now')
