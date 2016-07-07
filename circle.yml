@@ -7,7 +7,7 @@ dependencies:
    #- "vendor/bundle" #キャッシュ
   override:
    - sudo apt-get install xvfb
-   - sudo apt-get install libqt4-dev
+   #- sudo apt-get install libqt4-dev
    - gem install bundler --pre
    - bundle install -j4 #--path vendor/bundle #並列化
    - wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.0.jar
