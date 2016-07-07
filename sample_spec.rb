@@ -21,7 +21,7 @@ Capybara::Webkit.configure do |config|
   config.allow_url('*')
 end
 
-describe "ログイン", js: true do
+describe "ログイン" do
 
   before do
     visit 'https://twitter.com/login'
