@@ -1,17 +1,13 @@
 machine:
   ruby:
-    version: 2.3.0 #デフォルトでは1.9.3でgemがインストールできない
+    version: 2.3.0
+  timezone:
+    Asia/Tokyo
 
 dependencies:
-  cache_directories:
-   #- "vendor/bundle" #キャッシュ
   override:
-   #- sudo apt-get update
-   #- sudo apt-get upgrade
-   #- sudo apt-get install xvfb
-   #- sudo apt-get install libqt4-dev
    - gem install bundler --pre
-   - bundle install -j4 #--path vendor/bundle #並列化
+   - bundle install -j4
    - wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.0.jar
    - java -jar selenium-server-standalone-2.53.0.jar:
        background: true
