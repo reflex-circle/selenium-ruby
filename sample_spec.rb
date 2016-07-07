@@ -7,7 +7,7 @@ RSpec.configure do |config|
 end
 
 Capybara.default_driver = :selenium
-
+Capybara.javascript_driver = :webkit
 describe "ログイン", js: true do
 
   before do
