@@ -22,7 +22,7 @@ describe "gitHubにログインしてBioを更新する" do
     
     #find('.vcard-avatar').click
     visit 'https://github.com/settings/profile'
-    fill_in 'user_profile_bio', with: Time.now.strftime("%Y-%m-%d %H:%M:%S") + 'by CircleCI'
+    fill_in 'user_profile_bio', with: Time.now.strftime("%Y-%m-%d %H:%M:%S") + ' by CircleCI'
     
     click_on 'Update profile'
   end
