@@ -11,7 +11,7 @@ Capybara.default_driver = :selenium
 describe "gitHubにログインしてBioを更新する" do
 
   before do
-    visit 'https://github.com/'
+    visit 'https://github.com/login'
   end
 
   it "ログインできること" do
