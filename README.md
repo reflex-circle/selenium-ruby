@@ -1,7 +1,17 @@
 # SeleniumとCapybaraでE2Eテストをする
 
 ## テスト対象
+
 github - https://github.com
+
+## 環境
+
+* gem "selenium-webdriver"
+* gem "capybara"
+* gem "rspec"
+* gem "pry-byebug"
+* gem "capybara-webkit"
+* gem "headless"
 
 ## テストケース
 
@@ -9,16 +19,21 @@ github - https://github.com
 　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_login.png)
 
 #### 2. ホーム画面 -> プロフィール画面
-　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_home.png)
+　![case2](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_home.png)
 　
 #### 3. プロフィール画面 -> 編集画面
-　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_profile.png)
+　![case3](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_profile.png)
 
 #### 4. 編集画面 -> プロフィール画面
-　![case1](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_edit.png)
-　
+　![case4](https://raw.githubusercontent.com/wiki/reflex-circle/selenium-ruby/github_edit.png)
 
-## 覚書
+#### 5. Bioの値がビルドを実行した時間に更新されているか確認　
+
+#テストが通ったか
+
+<img src="https://circleci.com/gh/reflex-circle/selenium-ruby.svg?style=shield&circle-token=fbadcabe515d1f7d0d54175159cfe12ebb5a01ab">
+
+#覚書
 _________________________________________________________________________________________________________
 ###■Capybara
 
