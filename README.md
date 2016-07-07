@@ -4,6 +4,10 @@
 
 github - https://github.com
 
+## CI(Sass)環境
+CircleCI  - https://circleci.com/signup/  
+LoginID - reflex-circle
+
 ## 環境
 
 * gem "selenium-webdriver"
