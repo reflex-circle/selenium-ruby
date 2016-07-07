@@ -24,7 +24,7 @@ end
 describe "ログイン", js: true do
 
   before do
-    visit 'https://twitter.com/login?lang=ja'
+    visit 'https://twitter.com/login'
   end
 
 =begin
@@ -42,11 +42,12 @@ describe "ログイン", js: true do
 
   it "ログインできること" do
     #puts CGI.pretty(page.body)
+    puts current_path
     fill_in 'session[username_or_email]', with: ENV['TWITTER_ID']
     fill_in 'session[password]',          with: ENV['TWITTER_PW']
     find('.primary-btn').click
     #click_button 'ログイン'
-    puts ENV['TWITTER_ID']
+    puts ENV['TWITTER_PW']
     puts current_path
     #expect(current_path).to eq '/'
     
