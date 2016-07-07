@@ -1,13 +1,18 @@
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'pry'
+require 'headless'
 
 RSpec.configure do |config|
   config.include Capybara::DSL
 end
-@headless = Headless.new
+
+headless = Headless.new
+headless.start
+
 Capybara.default_driver = :selenium
 Capybara.javascript_driver = :webkit
+
 describe "ログイン", js: true do
 
   before do
