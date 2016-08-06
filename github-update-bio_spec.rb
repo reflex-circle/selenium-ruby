@@ -13,7 +13,7 @@ describe 'github test' do
   before do
     @outtime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
   end
-
+ 
   it 'gitHubにログインしてBioを更新する' do
     # case1 - input
     visit 'https://github.com/login'
